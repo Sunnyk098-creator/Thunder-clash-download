@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thunder Clash</title>
+<style>
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #ADD8E6; /* Light blue background */
+    color: #fff;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    position: relative; /* Needed for absolute positioning of pseudo-element */
+    /* overflow: hidden; Removed this to fix scrolling */
+    /* The large emoji will still be fixed and won't cause scrollbars on its own */
+}
+
+body::before {
+    content: '⚡'; /* Thunderbolt emoji */
+    position: fixed; /* Fixed so it stays in place even if content scrolls */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the emoji */
+    font-size: 40vw; /* Very large size, relative to viewport width */
+    color: rgba(0, 0, 0, 0.15); /* Subtle color for the background element */
+    z-index: -1; /* Place it behind other content */
+    opacity: 0.5; /* Make it slightly more visible than 0.1 */
+    pointer-events: none; /* Ensure it doesn't interfere with interactions */
+}
+
+.container {
+    max-width: 800px;
+    width: 90%;
+    background-color: rgba(0, 0, 0, 0.75);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 0 25px rgba(0, 204, 255, 0.85); /* Electric blue/cyan shadow */
+    text-align: center; /* This will center inline-block elements like the button and text */
+    position: relative; /* Ensure container is above the emoji background */
+    z-index: 1;
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+    margin-bottom: 25px;
+    display: block; /* Make it a block element */
+    margin-left: auto; /* Center horizontally */
+    margin-right: auto; /* Center horizontally */
+}
+
+.download-button {
+    background-color: #00ccff; /* Electric blue/cyan */
+    color: #fff;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    display: inline-block; /* Keeps it behaving like a button */
+    margin-bottom: 30px;
+    border: 2px solid #00e6ff; /* Slightly lighter electric blue */
+    box-shadow: 0 0 15px rgba(0, 204, 255, 0.6); /* Electric blue/cyan shadow */
+}
+
+.download-button:hover {
+    background-color: #00b3e6; /* Darker electric blue on hover */
+    box-shadow: 0 0 25px rgba(0, 204, 255, 1); /* Intense electric blue/cyan shadow on hover */
+    transform: scale(1.05);
+}
+
+.description {
+    text-align: left; /* Description text remains left-aligned */
+    line-height: 1.7;
+    font-size: 16px;
+}
+
+.description h2 {
+    text-align: center;
+    color: #4ddbff; /* Light electric blue/cyan for headings */
+    font-size: 24px;
+}
+
+.description ul {
+    list-style: none;
+    padding: 0;
+}
+
+.description li {
+    margin-bottom: 12px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.description li::before {
+    content: '🔹';
+    position: absolute;
+    left: 0;
+    color: #00ccff; /* Electric blue/cyan for list bullets */
+}
+</style>
+</head>
+<body>
+<div class="container">
+    <!-- App Logo -->
+    <img src="fire.png" alt="Thunder Clash Logo" class="logo">
+
+    <!-- Download Button -->
+    <a href="https://www.mediafire.com/file/w1ctn5itbisicha/_Thunder_clash_19083646.apk" class="download-button">Download</a>
+
+    <!-- Description -->
+    <div class="description">
+        <h2>Your</h2>
+        <h2><strong>⚡ Thunder Clash ⚡</strong></h2>
+
+        <p>Thunder Clash is a dynamic, feature-rich gaming platform designed for competitive players. The app offers a seamless and engaging experience with the following key features:</p>
+        <ul>
+            <li><strong>Electrifying Design</strong>: Features a dynamic glassmorphism UI with electric blue/cyan accents, animated text glows, and a thunderbolt background emoji.</li>
+            <li><strong>Splash Screen</strong>: Greets users with an animated logo, app name, loading spinner, and developer credit on startup.</li>
+            <li><strong>Server Connection</strong>: Allows users to connect to various game servers, view their online/offline status, and enter server-specific passwords and activation codes.</li>
+            <li><strong>User Authentication</strong>: Supports secure user login and sign-up with unique @usernames and a 4-digit Thunder PIN for transactions.</li>
+            <li><strong>Account Management</strong>: Users can update their password and log out of their account.</li>
+            <li><strong>Banned Account Handling</strong>: Provides a dedicated screen for banned users to request an account review from administrators.</li>
+            <li><strong>Maintenance Mode</strong>: Displays a maintenance screen when the app or server is undergoing updates.</li>
+            <li><strong>Home Dashboard</strong>: Presents a personalized welcome message, current wallet balance, and quick action buttons for sending money and viewing pending payments.</li>
+            <li><strong>Game Selection</strong>: Offers a grid-based selection for various game types, including "File Work", "Free Fire", "Ludo", and "Mystery Box", to browse specific matches.</li>
+            <li><strong>Live Match Listings</strong>: Displays live matches with details like time, prize pool, and entry fee. Users can join matches by providing their respective game IDs (e.g., Free Fire UID, WhatsApp number).</li>
+            <li><strong>Match Details</strong>: Provides in-depth information for joined matches and allows users to submit a "Finish Match" request.</li>
+            <li><strong>Secure Wallet System</strong>: Manages user balances, enables sending money to other users via Thunder ID with PIN verification, and facilitates withdrawal requests via UPI ID.</li>
+            <li><strong>Transaction History</strong>: Keeps a detailed record of all withdrawals, sent/received funds, and match-related transactions (entry fees, winnings).</li>
+            <li><strong>Pending Payments</strong>: Shows a dedicated screen for pending balance and a history of incoming and outgoing pending transactions.</li>
+            <li><strong>Personalized Themes</strong>: Users can customize the app's accent color theme, with exclusive "Premium" themes available for premium subscribers.</li>
+            <li><strong>Premium Membership</strong>: Offers an ad-free experience and access to exclusive app themes for premium users, with a special welcome notification upon activation.</li>
+            <li><strong>Admin Notices</strong>: Notifies users of important announcements or messages from the administrator.</li>
+            <li><strong>In-App Advertising</strong>: Displays advertisements for non-premium users.</li>
+            <li><strong>Background Music & Sound Effects</strong>: Enhances user experience with ambient background music and click sounds.</li>
+            <li><strong>Profile Page</strong>: Centralizes user information and provides options to change password and find support contact (Telegram link).</li>
+        </ul>
+
+        <p>This comprehensive set of features makes Thunder Clash an immersive and secure platform for gamers. 🎮</p>
+
+        <p>Let me know if you'd like any further changes! 😊</p>
+    </div>
+</div>
+</body>
+</html>
